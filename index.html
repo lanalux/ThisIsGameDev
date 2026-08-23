@@ -1,6 +1,26 @@
 <!DOCTYPE HTML>
+<html lang="en">
 <HEAD>
+<meta charset="UTF-8">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>This Is Game Dev</title>
+
+    <meta name="description" content="Game development, livestreams, projects, and updates.">
+
+    <link rel="icon" href="favicon.ico">
+
+	<meta property="og:title" content="This Is Game Dev">
+	<meta property="og:description" content="Game development, livestreams, projects, and updates.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://thisisgamedev.com">
+	<!-- <meta property="og:image" content="https://thisisgamedev.com/images/preview.jpg"> -->
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="This Is Game Dev">
+	<meta name="twitter:description" content="Game development, livestreams, projects, and updates.">
+	<!-- <meta name="twitter:image" content="https://thisisgamedev.com/images/preview.jpg"> -->
 
 </HEAD>
 <BODY BGCOLOR="#111" ALIGN="CENTER">
@@ -167,7 +187,7 @@
 <h3>The Stream</h3>
 <p>===================================</p>
 
-<div id="twitch-embed"></div>
+<!-- <div id="twitch-embed"></div>
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <script>
       new Twitch.Embed("twitch-embed", {
@@ -176,10 +196,112 @@
         channel: "lana_lux",
         layout: "video",
         autoplay: true,
+		theme: "dark",
         muted: true
       });
     </script>
+</div> -->
+
+<!-- STREAM SECTION -->
+<div id="stream-section">
+
+    <!-- YOUR OFFLINE DISPLAY -->
+    <div id="offline-stream">
+        <div class="offline-badge">OFFLINE</div>
+
+        <h2>Lana_Lux is offline.</h2>
+
+        <p>
+            I'm probably working on the game.
+        </p>
+
+    </div>
+
+
+    <!-- TWITCH PLAYER -->
+    <div id="twitch-embed" style="display:none;"></div>
+
 </div>
+
+
+<!-- TWITCH SCRIPT -->
+<script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+<script>
+    const embed = new Twitch.Embed("twitch-embed", {
+        width: "100%",
+        height: 480,
+        channel: "lana_lux",
+        layout: "video",
+        autoplay: true,
+        muted: true,
+        theme: "dark"
+    });
+
+
+    embed.addEventListener(Twitch.Embed.VIDEO_READY, function () {
+
+        const player = embed.getPlayer();
+
+        player.addEventListener(Twitch.Player.ONLINE, function () {
+
+            // Stream is live
+            document.getElementById("twitch-embed").style.display = "block";
+            document.getElementById("offline-stream").style.display = "none";
+
+        });
+
+
+        player.addEventListener(Twitch.Player.OFFLINE, function () {
+
+            // Stream is offline
+            document.getElementById("twitch-embed").style.display = "none";
+            document.getElementById("offline-stream").style.display = "block";
+
+        });
+
+    });
+</script>
+
+
+<style>
+
+#stream-section {
+    width: 100%;
+}
+
+#offline-stream {
+    background: #111;
+    padding: 50px;
+    text-align: center;
+    min-height: 300px;
+    box-sizing: border-box;
+}
+
+#offline-stream h2 {
+    margin: 15px 0;
+}
+
+.offline-badge {
+    display: inline-block;
+    background: #eee;
+    color: #111;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.twitch-link {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+</style>
+
+
+
+
 	
 <br/>
 <br/>
