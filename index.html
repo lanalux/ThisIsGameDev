@@ -166,12 +166,33 @@
 <br/>
 <h3>The Stream</h3>
 <p>===================================</p>
-<iframe
-    src="https://player.twitch.tv/?channel=lana_lux&parent=thisisgamedev.com&autoplay=true&muted=true"
-    width="100%"
-    height="500"
-    allowfullscreen>
-</iframe>
+
+<div id="twitch-embed"></div>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script>
+      new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "lana_lux",
+        layout: "video",
+        autoplay: true,
+        muted: true
+      });
+    </script>
+</div>
+	
+<!-- 	
+    <div id="twitch-embed"></div>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "lana_lux",
+        parent: ["thisisgamedev.com", "www.thisisgamedev.com"]
+      });
+    </script> -->
+	
 <br/>
 <br/>
 <br/>
