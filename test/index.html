@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This Is Game Dev — game development, art, tech, community, and live streams.">
+  <title>This Is Game Dev</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="This Is Game Dev home">
+      <span class="brand-kicker">THIS IS</span>
+      <span class="brand-main">GAME DEV</span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Open menu</span>
+      <span></span><span></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a class="active" href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#schedule">Schedule</a>
+      <!-- <a href="#featured">Get Featured</a> -->
+      <a href="segments.html">Segments</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="mantra" aria-hidden="true">
+      CREATE<br>LEARN<br>SHARE<br>GROW
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero" aria-labelledby="hero-title">
+      <img class="hero-art" src="bg.jpg" alt="" aria-hidden="true">
+      <div class="hero-copy">
+        <h1 id="hero-title">GAME DEVELOPMENT.<br>ART. TECH.<br>AND EVERYTHING<br>IN BETWEEN.</h1>
+      </div>
+      <!-- <p class="hero-side">BETTER ART.<br>BRIGHTER<br>WORLDS.</p> -->
+    </section>
+
+    <section id="live" class="section live-section" aria-labelledby="live-heading" hidden>
+      <div class="section-heading">
+        <h2 id="live-heading"><span class="status-dot" aria-hidden="true"></span> LIVE ON TWITCH</h2>
+        <p>Development / art / community / cowork</p>
+      </div>
+
+      <div class="live-grid">
+        <div class="player-shell" id="twitch-player" aria-live="polite"></div>
+        <aside class="live-aside">
+          <p>DEV<br>ART<br>TECH<br>COMMUNITY<br>ATMOSPHERE</p>
+          <span class="short-rule"></span>
+          <p>CREATE<br>STRANGE<br>BEAUTIFUL<br>THINGS<br>TOGETHER.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="schedule" class="section schedule-section" aria-labelledby="schedule-heading">
+      <div class="section-heading">
+        <h2 id="schedule-heading">UPCOMING STREAMS</h2>
+        <p>All times shown in your local time</p>
+      </div>
+
+      <div id="schedule-list" class="schedule-list" aria-live="polite">
+        <p class="loading">Loading Twitch schedule…</p>
+      </div>
+    </section>
+
+    <section id="about" class="about-section" aria-labelledby="about-heading">
+      <div class="about-art">
+        <img src="bg.jpg" alt="">
+      </div>
+      <div class="about-copy">
+        <h2 id="about-heading">ABOUT</h2>
+        <p>
+          Game development, art, science, tech and a little chaos.
+          This is a place to create, learn, share and belong.
+          All experience levels are welcome.
+        </p>
+        <span class="short-rule"></span>
+      </div>
+    </section>
+<!-- 
+    <section id="featured" class="featured-section" aria-labelledby="featured-heading">
+      <div class="featured-copy">
+        <h2 id="featured-heading">GET FEATURED</h2>
+        <p>
+          Have a game, tool, creative product, event, or interesting project?
+          Pitch something worth putting in front of a curious creative audience.
+        </p>
+        <p class="categories">GAMES / TOOLS / INDIE PROJECTS / CREATIVE PRODUCTS / IDEAS / EVENTS</p>
+      </div>
+      <img class="featured-art" src="assets/featured.svg" alt="">
+    </section> -->
+
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <div>
+        <p class="eyebrow">PROFESSIONAL INQUIRIES</p>
+        <h2 id="contact-heading">WORK TOGETHER.</h2>
+        <p>
+          Sponsorships, event hosting, consulting, game-dev / 3D work,
+          collaborations, speaking, and project features.
+        </p>
+      </div>
+
+      <form id="contact-form" class="contact-form" action="api/contact.php" method="post" novalidate>
+        <div class="form-grid">
+          <label>
+            Name
+            <input name="name" autocomplete="name" required maxlength="80">
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required maxlength="160">
+          </label>
+        </div>
+
+        <label>
+          Company / project
+          <input name="company" autocomplete="organization" maxlength="120">
+        </label>
+
+        <label>
+          What are you reaching out about?
+          <select name="topic" required>
+            <option value="">Select one</option>
+            <option>Sponsorship / promotion</option>
+            <option>Event hosting / speaking</option>
+            <option>Game dev / 3D / creative work</option>
+            <option>Other professional inquiry</option>
+          </select>
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" rows="6" required maxlength="4000"></textarea>
+        </label>
+
+        <label class="hp-field" aria-hidden="true">
+          Website
+          <input name="website" tabindex="-1" autocomplete="off">
+        </label>
+
+        <input type="hidden" name="started_at" id="started-at">
+
+        <div class="form-actions">
+          <button type="submit">SEND INQUIRY</button>
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>THIS IS GAME DEV</span>
+    <span>A MORE INTERESTING TOMORROW.</span>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

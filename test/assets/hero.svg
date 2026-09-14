@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="REPLACE WITH HERO ART">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#1d3048"/>
+    <stop offset="1" stop-color="#0b1724"/>
+  </linearGradient>
+  <radialGradient id="orb">
+    <stop offset="0" stop-color="#e6a2c0" stop-opacity=".95"/>
+    <stop offset=".55" stop-color="#e6a2c0" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#e6a2c0" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<circle cx="1008" cy="252" r="234" fill="url(#orb)" filter="url(#blur)"/>
+<circle cx="1008" cy="252" r="144" fill="none" stroke="#e6a2c0" stroke-opacity=".55" stroke-width="2"/>
+<path d="M0 666 C 256 612, 463 720, 704 657 S 1184 576, 1600 684 V 900 H0Z" fill="#071019" opacity=".95"/>
+<path d="M0 702 C 320 648, 688 756, 1600 684" stroke="#e6a2c0" stroke-opacity=".22" fill="none"/>
+<g opacity=".34" stroke="#d9c6d8">
+  <path d="M272 657 V342 h96 v315"/>
+  <path d="M448 684 V432 h56 v252"/>
+  <path d="M1328 684 V387 h80 v297"/>
+</g>
+<text x="32" y="870" fill="#e7edf2" opacity=".55" font-family="monospace" font-size="18" letter-spacing="4">REPLACE WITH HERO ART</text>
+</svg>
