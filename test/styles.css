@@ -111,16 +111,51 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .hero-copy {
   position: absolute; left: clamp(18px, 3vw, 42px); bottom: clamp(28px, 6vw, 70px);
-  z-index: 2; max-width: 440px;
+  z-index: 2; max-width: 940px;
 }
 .hero h1 {
-  margin: 0;
-  font-size: clamp(28px, 3.9vw, 58px);
+  margin: 0; 
+  /* font-size: clamp(28px, 3.9vw, 58px);
   line-height: 1.05;
-  letter-spacing: .12em;
+  letter-spacing: .12em; */
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: uppercase; 
+
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 5.5em;
+  line-height: .85;
+  letter-spacing: .015em;
+
+
+/* 
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 4.5em;
+  line-height: 1.11;
+  letter-spacing: .025em; */
+
+
+  /* font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
+  /* font-size: 4.5em;
+  line-height: 1.14;
+  letter-spacing: .3em; */
+  /* font-size: 5.5em;
+  line-height: .98;
+  letter-spacing: .025em; */
+  
 }
+
+
+
+
 .hero-side {
   position:absolute; right: clamp(18px, 3vw, 46px); top: clamp(80px, 12vw, 170px);
   z-index:2; margin:0; text-align:right; letter-spacing:.18em; line-height:1.25; color:#d9dce0;

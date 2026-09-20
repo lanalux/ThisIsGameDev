@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This Is Game Dev — game development, art, tech, community, and live streams.">
+  <title>This Is Game Dev</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="This Is Game Dev home">
+      <span class="brand-kicker">THIS IS</span>
+      <span class="brand-main">GAME DEV</span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Open menu</span>
+      <span></span><span></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="segments.html">Segments</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="mantra" aria-hidden="true">
+      CREATE<br>LEARN<br>SHARE<br>GROW
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section id="schedule" class="section schedule-section" aria-labelledby="schedule-heading">
+      <div class="section-heading">
+        <h2 id="schedule-heading">UPCOMING STREAMS</h2>
+        <p>All times shown in your local time</p>
+      </div>
+
+      <div id="schedule-list" class="schedule-list" aria-live="polite">
+        <p class="loading">Loading Twitch schedule...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>THIS IS GAME DEV</span>
+    <span>CREATE / LEARN / SHARE / GROW</span>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
