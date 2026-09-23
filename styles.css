@@ -311,6 +311,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .segment-card p, .segment-card li { color:#c9d0d6; }
 .segments-note { margin-top:34px; color:var(--muted); font-size:12px; }
 
+
+.about-img{
+  width:500px; 
+}
+
 @media (max-width: 900px) {
   .site-header {
     min-height:78px;
