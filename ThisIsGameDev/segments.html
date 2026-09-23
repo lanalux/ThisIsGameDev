@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Stream segments and participation rules for This Is Game Dev.">
-  <title>Segments — This Is Game Dev</title>
+  <meta name="description" content="Information about the interactive coworking sessions on the Twitch Channel.">
+  <title>This Is Game Dev</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="segments-page">
@@ -20,11 +20,10 @@
       <span></span><span></span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Primary">
-      <a class="active" href="index.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="segments.html">Segments</a>
-      <a href="contact.html">Contact</a>
+      <a class="active" href="segments.html">Segments</a>
+      <!-- <a href="contact.html">Contact</a> -->
     </nav>
   </header>
 
@@ -32,7 +31,7 @@
     <header class="segments-hero">
       <p class="eyebrow">STREAM FORMAT</p>
       <h1>SEGMENTS</h1>
-      <p>Recurring formats, what to expect, and how to participate.</p>
+      <p>Information about the interactive coworking sessions on <a href="https://twitch.tv/lana_lux">the Twitch channel</a>. Recurring formats, what to expect, and how to participate.</p>
     </header>
 
     <div class="segment-list">
@@ -121,11 +120,28 @@
       </article>
     </div>
 
+    
+    <section id="live" class="section live-section" aria-labelledby="live-heading" hidden>
+      <div class="section-heading">
+        <h2 id="live-heading"><span class="status-dot" aria-hidden="true"></span> LIVE ON TWITCH</h2>
+        <p>GAME DEV / ART / SCIENCE / TECH</p>
+      </div>
+
+      <div class="live-grid">
+        <div class="player-shell" id="twitch-player" aria-live="polite"></div>
+        <aside class="live-aside">
+          <p>DEV<br>ART<br>SCIENCE<br>TECH</p>
+          <span class="short-rule"></span>
+        </aside>
+      </div>
+    </section>
+
+
   </main>
 
   <footer class="site-footer">
     <span>THIS IS GAME DEV</span>
-    <span>CREATE / LEARN / SHARE / GROW</span>
+    <span>GAME DEV / ART / SCIENCE / TECH</span>
   </footer>
 
   <script src="config.js"></script>

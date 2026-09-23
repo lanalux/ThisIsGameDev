@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This is Game Dev is a community of game developers coworking together online.">
+  <title>This Is Game Dev</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="segments-page">
+  <a class="skip-link" href="index.html">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-kicker">THIS IS</span>
+      <span class="brand-main">GAME DEV</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Open menu</span>
+      <span></span><span></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a class="active"  href="about.html">About</a>
+      <a href="segments.html">Segments</a>
+      <!-- <a href="contact.html">Contact</a> -->
+    </nav>
+  </header>
+
+  <main id="main" class="segments-wrap">
+    <header class="segments-hero">
+      <p class="eyebrow">THIS IS GAME DEV</p>
+      <h1>ABOUT</h1>
+      <p>An online community of game developers, artists, programmers, entrepreneurs and creatives coworking together.</p>
+    </header>
+
+      <article class="segment-card">
+        <div class="segment-number"></div>
+        <div>
+          <h2>About</h2>
+            <p>This is a Game Dev is a community of digital creators who cowork online, keep each other company and support each other while working towards our creative passions.</p>
+            <p><a href="https://twitch.tv/lana_lux/" target="_new">The official Twitch stream is hosted by Lana Lux who works on her game STRAIN and hosts coworking sessions, segments and events live throughout the week.</p>
+            <p>People meet online to work together, discuss game development, science, tech, philosophy, etc.</p>
+            <p>While there are many regulars, anyone is welcome to join the community.</p>
+            <p>Conversations continue when the stream is offline on Discord. This is also where work can be shared.</p>
+        </div>
+      </article>
+
+    <section id="live" class="section live-section" aria-labelledby="live-heading" hidden>
+      <div class="section-heading">
+        <h2 id="live-heading"><span class="status-dot" aria-hidden="true"></span> LIVE ON TWITCH</h2>
+        <p>GAME DEV / ART / SCIENCE / TECH</p>
+      </div>
+
+      <div class="live-grid">
+        <div class="player-shell" id="twitch-player" aria-live="polite"></div>
+        <aside class="live-aside">
+          <p>DEV<br>ART<br>SCIENCE<br>TECH</p>
+          <span class="short-rule"></span>
+        </aside>
+      </div>
+    </section>
+
+
+
+
+  </main>
+
+  <footer class="site-footer">
+    <span>THIS IS GAME DEV</span>
+    <span>GAME DEV / ART / SCIENCE / TECH</span>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
