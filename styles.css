@@ -40,6 +40,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   outline-offset: 4px;
 }
 
+.segment-card a,
+.categories a {
+  color: #df9cbd;
+}
+
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
@@ -87,7 +92,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-size: 10px;
   line-height: 1.35;
   letter-spacing: .28em;
-  color: rgba(240,245,248,.63);
+  /* color: rgba(240,245,248,.63); */
+  color: #df9cbd;
 }
 
 .nav-toggle { display:none; }
